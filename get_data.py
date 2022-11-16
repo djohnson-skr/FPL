@@ -3,6 +3,7 @@ import requests
 from pandas import json_normalize
 import write_to_pg
 import write_to_gsheets
+import write_to_snowflake
 
 def main():
     # ----- Grab the data ----- #
@@ -65,8 +66,9 @@ def main():
     draft_order_pg = draft_order.set_index('player_name')
     #print(draft_order)
 
-    write_to_pg.main(current_gameweek, league_pg, league_entries_pg, matches_pg, standings_pg, draft_order_pg)
-    write_to_gsheets.main(current_gameweek, league, league_entries, matches, standings, draft_order)
+    #write_to_pg.main(current_gameweek, league_pg, league_entries_pg, matches_pg, standings_pg, draft_order_pg)
+    #write_to_gsheets.main(current_gameweek, league, league_entries, matches, standings, draft_order)
+    write_to_snowflake.main(league, league_entries, matches, standings, draft_order)
 
 def get_data(url):
     r = requests.get(url)

@@ -1,0 +1,21 @@
+CREATE TABLE league (
+      index INTEGER,
+      admin_entry VARCHAR (50),
+      closed VARCHAR (50),
+      draft_dt TIMESTAMP,
+      draft_pick_time_limit INTEGER,
+      draft_status VARCHAR (50),
+      draft_tz_show VARCHAR (50),
+      id VARCHAR (50),
+      ko_rounds VARCHAR (50),
+      make_code_public VARCHAR (50),
+      max_entries INTEGER,
+      min_entries INTEGER,
+      name VARCHAR (50),
+      scoring VARCHAR (50),
+      start_event VARCHAR (50),
+      stop_event VARCHAR (50),
+      trades VARCHAR (50),
+      transaction_mode VARCHAR (50),
+      variety VARCHAR (50)
+)
